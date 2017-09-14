@@ -33,7 +33,7 @@ export default class Tickets extends Component {
     }
 
     componentWillMount() {
-        axios.get(`${url()}/stripeKeyPub`)
+        axios.get(`/stripeKeyPub`)
         .then( res => {
                 this.setState({
                     stripeKeyPublishable: res.data.stripeKeyPublishable
@@ -54,7 +54,7 @@ export default class Tickets extends Component {
     }
 
     componentWillReceiveProps(newProps) {
-        axios.get(`${url()}/api/performances`)
+        axios.get(`/api/performances`)
             .then(res => {
                 this.setState({
                     performances: res.data.filter((e) => {if (e.name === newProps.showName) return e})
@@ -69,7 +69,7 @@ export default class Tickets extends Component {
     }
 
     getTickets(id) {
-        axios.get(`${url()}/api/performances/tickets/${id}`)
+        axios.get(`/api/performances/tickets/${id}`)
         .then(res => {
             
             this.setState({
@@ -423,7 +423,7 @@ export default class Tickets extends Component {
             let {specific_performance_id, section, seat_row, num} = seat.thisSeatObj;
             body.tickets.push({specific_performance_id, section, seat_row, num})
         });
-        axios.patch(`${url()}/api/performances/tickets/updateMany`, body)
+        axios.patch(`/api/performances/tickets/updateMany`, body)
             .then(res => {
                 this.getTickets(this.state.specificPerformanceID);
                 this.setState({

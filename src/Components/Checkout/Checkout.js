@@ -12,7 +12,7 @@ const errorPayment = data => {
 };
 
 const onToken = (amount, description, checkoutCallback) => token =>
-  axios.post(`${url()}/stripe`,
+  axios.post(`/stripe`,
     {
       description,
       source: token.id,

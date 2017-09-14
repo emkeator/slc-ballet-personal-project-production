@@ -76,10 +76,11 @@ app.patch('/api/performances/tickets/updateMany', (req, res) => {
 })
 
 //STRIPE API ENDPOINTS
-app.get("/stripeKeyPub", (req, res) => {
+app.get('/stripeKeyPub', (req, res) => {
+    console.log(stripeKeyPublishable);
     res.status(200).send({stripeKeyPublishable})
 });
-app.get("/stripe", (req, res) => {
+app.get('/stripe', (req, res) => {
     res.status(200).send({stripeKeyPublishable})
 });
 
@@ -95,5 +96,5 @@ app.post("/stripe", (req, res) => {
     stripe.charges.create(req.body, postStripeCharge(res));
 });
 
-const myPort = 3005;
+const myPort = process.env.PORT;
 app.listen(myPort, () => console.log(`I'm listening on port ` + myPort));

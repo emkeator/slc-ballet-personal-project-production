@@ -23,7 +23,7 @@ export default class Support extends Component {
     }
 
     componentWillMount() {
-        axios.get(`${url()}/stripeKeyPub`)
+        axios.get(`/stripeKeyPub`)
         .then( res => {
                 this.setState({
                     stripeKeyPublishable: res.data.stripeKeyPublishable

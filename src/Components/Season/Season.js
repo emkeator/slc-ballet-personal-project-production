@@ -25,7 +25,7 @@ export default class Season extends Component {
     }
 
     componentWillMount() {
-        axios.get(`${url()}/api/shows`)
+        axios.get(`/api/shows`)
         .then(res => {
             console.log('I\'ve got the shows.');
             this.setState({

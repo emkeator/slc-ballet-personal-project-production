@@ -19,7 +19,7 @@ export default class About extends Component {
     }
 
     componentWillMount() {
-        axios.get(`${url()}/api/dancers`)
+        axios.get(`/api/dancers`)
         .then(res => {
             console.log('I\'ve got the dancers.');
             this.setState({
