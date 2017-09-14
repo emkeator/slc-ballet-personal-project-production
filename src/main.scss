@@ -1,0 +1,108 @@
+@import './sass/reset';
+
+// ======= Variables ======= //
+@import './sass/variables';
+
+// ======= Mixins ======= //
+@import './sass/mixins';
+
+// ======= Components ======= //
+@import './Components/Nav/Nav';
+@import './Components/Home/Home';
+@import './Components/Season/Season';
+@import './Components/Tickets/Tickets';
+@import './Components/Support/Support';
+@import './Components/About/About';
+
+
+@include landing-page-bg-image();
+@include about-page-bg-image();
+@include season-page-bg-image();
+@include support-page-bg-image();
+
+.overAll {
+    position: fixed;
+    background-color: black;
+    opacity: 1;
+    z-index: 5;
+
+    overflow: hidden;
+
+    img {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+    }
+}
+
+#overAllTopLeft{
+    width: 50vw;
+    height: 50vh;
+
+    top: 0vh;
+    left: 0vw;
+
+    img {
+        bottom: -150px;
+        right: -150px;
+    }
+}
+#overAllTopRight {
+    width: 50vw;
+    height: 50vh;
+
+    top: 0vh;
+    left: 50vw;
+
+    img {
+        bottom: -150px;
+        left: -150px;
+    }
+}
+#overAllBottomLeft {
+    width: 50vw;
+    height: 50vh;
+
+    top: 50vh;
+    left: 0vw;
+
+    img {
+        top: -150px;
+        right: -150px;
+    }
+}
+#overAllBottomRight{
+    width: 50vw;
+    height: 50vh;
+
+    top: 50vh;
+    left: 50vw;
+
+    img {
+        top: -150px;
+        left: -150px;
+    }
+}
+
+.mobileHeader {
+    width: calc(100vw + 10px);
+    display: block;
+    position: relative;
+    left: 0px;
+}
+
+.fullscreenHeader {
+    width: calc(100vw + 10px);
+    display: none;
+    position: relative;
+    left: 0px;
+}
+
+@media (min-width: 650px) {
+    .mobileHeader{
+        display: none;
+    }
+    .fullscreenHeader{
+        display: block;
+    }
+}

@@ -1,0 +1,287 @@
+@import './../../sass/mixins';
+@import './../../sass/variables';
+
+.aboutPage {
+    width: 100vw;
+    background-color: $white;
+    background-size: cover;
+    background-repeat: none;
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .aboutPageContainer {
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 300px;
+        justify-content: center;
+        align-items: center;
+
+        padding: 50px 0;
+    }
+
+}
+
+.aboutPageHeaderContainer {
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.aboutPageBallet {
+    width: 300px;
+    padding: 30px 20px;
+
+    background-color: $black-opaque-2;
+    color: $white;
+    font: {
+        family: $sansFont;
+        size: 85%;
+    }
+    text-align: center;
+    line-height: 1.2em;
+    letter-spacing: 0.25em;
+    overflow: scroll;
+    margin-bottom: 70px;
+}
+
+.aboutPageCompany {
+    width: 300px;
+    padding: 30px 50px;
+    background-color: $black-opaque-2;
+
+    color: $white;
+    font: {
+        family: $sansFont;
+        size: 90%;
+    }
+    text-align: center;
+    letter-spacing: 0.2em;
+    overflow: scroll;
+    h1 {
+        font: {
+            family: $sansFont;
+            size: 2rem;
+        }
+        text-transform: uppercase;
+        margin: 10px 0 10px 0;
+        letter-spacing:0.4em;
+    }
+    h2 {
+        font: {
+            family: $serifFont;
+            size: 120%;
+        }
+        text-transform: uppercase;
+        margin: 30px 0 10px 0;
+    }
+    li {
+        margin: 5px;
+        color: $white;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    div {
+        width: 70vw;
+    }
+}
+
+.contact {
+    width: 100vw;
+    // height: 180px;
+    background-color: $black-opaque-2;
+
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    text: {
+        transform: uppercase;
+    }
+    font: {
+        family: $serifFont;
+        size: 0.5rem;
+    }
+    letter-spacing: 0.4em;
+    color: $white;
+
+    div {
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        margin: 15px 0;
+    }
+    h2 {
+        width: 100vw;
+        font: {
+            size: 1.5rem;
+            family: $sansFont;
+        }
+        letter-spacing: 0.4em;
+        margin-bottom: 20px;
+    }
+
+    span {
+        margin-bottom: 10px;
+        width: 100vw;
+
+        cursor: pointer;
+        &:hover {
+            color: $sunset;
+        }
+        // border: 1px solid red;
+    }
+
+    input {
+        margin-right: 30px;
+        width: 150px;
+        border: {
+            top: none;
+            right: none;
+            left: 1px solid $cloud;
+            bottom: 1px solid $cloud;                
+        }
+        height: 25px;
+        padding-left: 7px;
+        font: {
+            family: $sansFont;
+            size: 80%;
+        }
+        letter-spacing: 0.2em;
+        background-color: $black-opaque-3;
+        color: $white;
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: $white;
+        }
+    }
+
+    button {
+        color: $white;
+        font: {
+            family: $sansFont;
+            size: 90%;
+        }
+        margin-top: 20px;
+        letter-spacing: 0.2em;
+        background-color: $cloud-opaque-2;
+        border: none;
+        padding: 7px;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background-color: $sunset-opaque-2;
+        }
+    }
+
+    .contactAlignLeft,
+    .contactAlignRight {
+        text-align: center;
+    }
+}
+
+@media (min-width: 550px){
+
+    .aboutPageCompany {
+        width: 500px;
+        padding: 10px 20px;
+        div {
+            width: 33vw
+        }
+    }
+
+    .contact {
+        span {
+            width: 33vw;
+            margin-bottom: 0px;
+            // border: 1px solid red;
+        }
+        .widthCenter {
+            width: 150px;
+        }
+        .widthSides {
+            width: calc((100vw - 150px) / 2);
+        }
+        .contactAlignRight {
+            text-align: right;
+        }
+        .contactAlignLeft {
+            text-align: left;
+        }
+    }
+}
+
+@media (min-width: 750px) {
+
+    .aboutPage {
+        .aboutPageContainer {
+            padding: 50px 10vw;
+            justify-content: flex-start;
+        }
+    }
+    .aboutPageBallet {
+        padding: 40px 40px;
+        font-size: 110%;
+        width: 80vw;
+    }
+
+    .aboutPageCompany {
+
+        width: 500px;
+        padding: 30px 50px;
+        font-size: 110%;
+        h2 {
+            font-size: 110%;
+            margin: 30px 0 10px 0;
+        }
+        li {
+            margin: 5px;
+        }
+    }
+
+    .contact {
+        font: {
+            size: 0.8rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        input {
+            font: {
+                size: 80%;
+            }
+        }
+
+        button {
+            font: {
+                size: 90%;
+            }
+        }
+    }
+}
+
+@media (min-width: 850) {
+
+    .aboutPageBallet {
+        padding: 60px 100px;
+        font-size: 110%;
+    }
+}

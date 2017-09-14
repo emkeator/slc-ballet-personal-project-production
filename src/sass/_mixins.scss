@@ -1,0 +1,116 @@
+
+@mixin menu-items-placement() {
+    &:nth-child(1){
+        bottom: calc(30px + (3* 25px) + (3* 35px) );
+        left: calc(20px + 15px - 11px );
+    }
+    &:nth-child(2){
+        bottom: calc(30px + (2* 25px) + (2* 35px) + 4px);
+        left: calc( 20px + 35px - 11px );
+    }
+    &:nth-child(3){
+        bottom: calc(30px + (1* 30px) + (1* 35px) - 5px + 4px);
+        left: calc(20px + (3* 15px) + (2* 15px) - 11px);
+    }
+    &:nth-child(4){
+        // bottom: calc(20px + 20px + ($menuWidth - 40px - 80px) / 5);
+        bottom: calc(32px + (0* 20px) + (0* 35px) + 7px);
+        left: calc(20px + (4* 20px) + (4* 15px) - 7px);
+    }
+}
+
+@mixin landing-page-bg-image() {
+    .landing {
+        background-image: url('./images/landingBGMobile.jpeg');
+    }
+
+    @media (min-width: 450px) {
+        .landing {
+            background-image: url('./images/landingBGMidSize.jpeg');
+        }
+    }
+
+    @media(min-width: 1000px) and (max-height:800px) {
+        .landing {
+            background-image: url('./images/landingBGFullscreen.jpeg');
+        }
+    }
+
+    @media (min-width:1200px) {
+        .landing {
+            background-image: url('./images/landingBGFullscreen.jpeg');
+        }
+    }
+}
+
+@mixin about-page-bg-image() {
+    .aboutPage {
+        background-image: url('./images/aboutBGMobile.jpeg');
+    }
+
+    @media (min-width: 550px) {
+        .aboutPage {
+            background-image: url('./images/aboutBGMidsize.jpeg');
+        }
+    }
+
+    @media(min-width: 900px) and (max-height:800px) {
+        .aboutPage {
+            background-image: url('./images/aboutBGFullscreen.jpeg');
+        }
+    }
+
+    @media (min-width:1100px) {
+        .aboutPage {
+            background-image: url('./images/aboutBGFullscreen.jpeg');
+        }
+    }
+}
+
+@mixin season-page-bg-image() {
+    .seasonPage {
+        background-image: url('./images/seasonBGMobile.jpeg');
+    }
+
+    @media (min-width: 450px) {
+        .seasonPage {
+            background-image: url('./images/seasonBGMidsize.jpeg');
+        }
+    }
+
+    @media(min-width: 1000px) and (max-height:800px) {
+        .seasonPage {
+            background-image: url('./images/seasonBGFullscreen.jpeg');
+        }
+    }
+
+    @media (min-width:1200px) {
+        .seasonPage {
+            background-image: url('./images/seasonBGFullscreen.jpeg');
+        }
+    }
+}
+
+@mixin support-page-bg-image() {
+    .supportPage {
+        background-image: url('./images/supportBGMobile.jpeg');
+    }
+
+    @media (min-width: 450px) {
+        .supportPage {
+            background-image: url('./images/supportBGMidsize.jpeg');
+        }
+    }
+
+    @media(min-width: 1000px) and (max-height:800px) {
+        .supportPage {
+            background-image: url('./images/supportBGFullscreen.jpeg');
+        }
+    }
+
+    @media (min-width:1200px) {
+        .supportPage {
+            background-image: url('./images/supportBGFullscreen.jpeg');
+        }
+    }
+}

@@ -1,0 +1,113 @@
+@import './../../sass/mixins';
+@import './../../sass/variables';
+
+.seasonPage {
+    width: 100vw;
+    background-color: $white;
+    background-size: cover;
+    background-repeat: none;
+    position: relative;
+
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+
+    letter-spacing: 0.2em;
+
+    .seasonPageContainer {
+        color: $white;
+        width: 100vw;
+        // border: 1px solid red;
+        min-height: 100vh;
+
+        display: flex;
+        flex-wrap: wrap;
+        // flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+.season {
+    background-color: $black-opaque-2;
+    width: 290px;
+    min-height: 815px;
+    // border: 1px solid red;
+    padding: 30px 20px;
+    margin: 10px 0;
+
+    h2 {
+        font: {
+            family: $serifFont;
+            size: 120%;
+        }
+        text-transform: uppercase;
+        margin: 10px 0 10px 0;
+    }
+    .upcoming {
+        margin-top: 60px;
+    }
+    li {
+        margin-bottom: 5px;
+        color: $cloud;
+        color: $light-grey;
+        font-family: $sansFont;
+    }
+
+    h3 {
+        font: {
+            family: $serifFont;
+            size: 100%;
+        }
+        text-transform: uppercase;
+        margin: 30px 0 10px 0;
+    }
+    img {
+        margin-top: 10px;
+    }
+
+    span {
+        font-size: 90%;
+    }
+
+    .onSale {
+        color: $white;
+        cursor: pointer;
+        &:hover {
+            color: $sunset;
+        }
+
+        em {
+            display: block;
+            margin-top: 10px;
+            color: $sunset;
+        }
+    }
+
+}
+
+.tickets {
+    padding: 0 20px;
+}
+
+.seasonPageHeaderContainer {
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+// @media(min-width: 600px) {
+//     .seasonPage {
+//         .seasonPageContainer {
+//             // width: 50vw;
+//         }
+//     }
+// }
+

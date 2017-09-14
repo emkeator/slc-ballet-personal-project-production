@@ -1,0 +1,54 @@
+{
+  "name": "ballet",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3000",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "express-sessions": "^1.0.6",
+    "google-maps-react": "^1.1.0",
+    "gsap": "^1.20.2",
+    "jquery": "^3.2.1",
+    "massive": "^3.2.2",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "pg": "^7.2.0",
+    "pug": "^2.0.0-rc.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.1.2",
+    "react-scripts": "1.0.11",
+    "react-stripe-checkout": "^2.6.3",
+    "redux": "^3.7.2",
+    "redux-promise-middleware": "^4.4.1",
+    "stripe": "^4.25.0"
+  },
+  "scripts": {
+    "start-js": "PORT=3001 react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+  },
+  "description": "Salt Lake City Ballet",
+  "main": "./server/server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emkeator/slc-ballet-personal-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emkeator/slc-ballet-personal-project/issues"
+  },
+  "homepage": "https://github.com/emkeator/slc-ballet-personal-project#readme"
+}
