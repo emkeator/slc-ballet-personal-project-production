@@ -38,17 +38,17 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "description": "Salt Lake City Ballet",
-  "main": "./server/server.js",
+  "main": "server.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emkeator/slc-ballet-personal-project.git"
+    "url": "git+https://github.com/emkeator/slc-ballet-personal-project-production.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/emkeator/slc-ballet-personal-project/issues"
+    "url": "https://github.com/emkeator/slc-ballet-personal-project-production/issues"
   },
-  "homepage": "https://github.com/emkeator/slc-ballet-personal-project#readme"
+  "homepage": "http://localhost:3005/"
 }

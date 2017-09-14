@@ -13,6 +13,8 @@ const express = require('express'),
 
 app.use(bodyParser.json());
 app.use(cors());
+console.log(__dirname + '/build');
+app.use(express.static('./build'));
 //using Stripe
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({extended: false}));
@@ -77,7 +79,6 @@ app.patch('/api/performances/tickets/updateMany', (req, res) => {
 
 //STRIPE API ENDPOINTS
 app.get('/stripeKeyPub', (req, res) => {
-    console.log(stripeKeyPublishable);
     res.status(200).send({stripeKeyPublishable})
 });
 app.get('/stripe', (req, res) => {
