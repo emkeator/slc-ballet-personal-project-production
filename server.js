@@ -13,8 +13,8 @@ const express = require('express'),
 
 app.use(bodyParser.json());
 app.use(cors());
-console.log(__dirname + '/build');
-app.use(express.static('./build'));
+// console.log(__dirname + '/build');
+app.use(express.static(__dirname + '/build'));
 //using Stripe
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({extended: false}));
