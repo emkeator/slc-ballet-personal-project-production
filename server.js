@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express'),
       bodyParser = require('body-parser'),
       cors = require('cors'),
-      session = require('express-session'),
       massive = require('massive'),
       stripeKeyPublishable = process.env.PUBLISHABLE_KEY,
       stripeKeySecret = process.env.SECRET_KEY,
