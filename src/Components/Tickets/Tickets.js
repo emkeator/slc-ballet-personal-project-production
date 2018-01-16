@@ -35,6 +35,7 @@ export default class Tickets extends Component {
     componentWillMount() {
         axios.get(`/stripeKeyPub`)
         .then( res => {
+                console.log(res)
                 this.setState({
                     stripeKeyPublishable: res.data.stripeKeyPublishable
                 });
