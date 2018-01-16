@@ -26,21 +26,21 @@ export default class Tickets extends Component {
             },
             currentLevel: '',
             currentSeat: '',
-            stripeKeyPublishable: '',
+            stripeKeyPublishable: 'pk_test_YFTCuBg4oNKazShr5YlO846L',
             justPurchased: false
         }
         this.checkoutNow = this.checkoutNow.bind(this);
     }
 
     componentWillMount() {
-        axios.get(`/stripeKeyPub`)
-        .then( res => {
-                console.log(res)
-                this.setState({
-                    stripeKeyPublishable: res.data.stripeKeyPublishable
-                });
-            }
-        )
+        // axios.get(`/stripeKeyPub`)
+        // .then( res => {
+        //         console.log(res)
+        //         this.setState({
+        //             stripeKeyPublishable: res.data.stripeKeyPublishable
+        //         });
+        //     }
+        // )
     }
 
     componentDidMount() {
